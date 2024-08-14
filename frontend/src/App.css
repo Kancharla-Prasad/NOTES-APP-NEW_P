@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* *********************************General Styles********************************** */
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+p{
+  border-radius: 12px;
+}
+input{
+  border-radius: 12px;
+}
+button:hover{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  /* color:black; */
+}
+li{
+  list-style: none;
+}
+body{
+  overflow-x: hidden;
+  background-color: #3be451;
+}
+
+
+
+
+/* ***********************************HOME SECTION ***************************************** */
+.home-section{
+  width: 100vw;
+  color: white;
+  position: relative;
+}
+.navbar{
+  position:sticky;
+  top: 0px;
+  background-color:#4e2237;
+  display: flex;
+  box-shadow: 2px 2px 2px white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2.5rem;
+}
+.navbar-logo{
+  font-size: 27px;
+  font-weight: bolder;
+  color: white;
+}
+.navbar-cred-btns{
+  display: flex;
+  gap: 2rem;
+}
+.navbar-cred-btns .login-btn{
+  background-color: blue;
+  color: white;
+  padding: 0.2rem 0.9rem;
+  border-radius: 12px;
+}
+.navbar-cred-btns .signup-btn{
+  background-color: blue;
+  color: white;
+  padding: 0.2rem 0.9rem;
+  border-radius: 12px;
+}
+.navbar-portfolio{
+  display: flex;
+  gap:1rem;
+  justify-content:center;
+  align-items: center;
+}
+.port-shortform{
+  /* border: 1px solid white; */
+  /* outline: none; */
+  padding: 0.5rem 0.8rem;
+  background-color:white;
+  color:#854c4c;
+  border-radius: 50%;
+}
+.navbar-portfolio .logout-btn{
+  padding: 0.1rem 0.7rem;
+  background-color: blue;
+  color: white;
+  border: 1px solid wheat;
+  border-radius: 12px;
+  outline: none;
+  /* border: none; */
+}
+.navbar-portfolio .logout-btn:hover{
+  cursor: pointer;
+}
+.about-notes{
+  background-color: rgb(188, 210, 230);
+  display: grid;
+  place-items: center;
+  padding: 10rem 5rem;
+}
+.about-notes small{
+  margin-top:3rem;
+  color: black;
+  /* font-weight: bold; */
+  font-size: 11px;
+}
+.about-notes p{
+  font-size: 19px;
+  color: #333;
+}
+.about-notes h1{
+  font-weight: bolder;
+  font-size: 31px;
+  color:black;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.about-notes h1::first-letter{
+  font-size: 43px;
+}
+
+
+
+/* no notes disply*/
+.no-notes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+  left: 500px;
+}
+.no-notes h1{
+  font-size: 30px;
+  text-transform: capitalize;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
+.emoji{
+  width: 40px;
+  font-size: 50px;
+}
+
+
+
+
+/* *********************************Login Page *******************************/
+.login-form-container{
+  display: grid;
+  place-items: center;
+  /* border: 1px solid red; */
+  height:90vh;
+}
+.login-form{
+  flex-direction: column;
+  display: flex;
+  border: 1px solid rgb(182, 236, 236);
+  border-radius: 24px;
+  padding: 3rem 2rem 3rem 2rem;
+  gap: 1rem;
+}
+.login-form input{
+  width: 100%;
+  font-size: 17px;
+  padding: 0rem 1rem;
+  background-color:rgb(237, 236, 241);
+  border: none;
+  outline: none;
+  height:35px;
+}
+.login-form h1{
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.login-form button{
+  border: none;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  height: 35px;
+}
+
+
+
+
+/* ***********************NOTEs Dispaly(in HOme page)************************/
+.notes-display{
+  padding:1rem 2rem;
+  /* background-color: beige; */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+.notes-display .note{
+  border: 1px solid rgb(17, 44, 119);
+  display: flex;
+  background-color: #535455;
+  flex-direction: column;
+  grid:1rem;
+  padding: 1rem 2rem;
+}
+.note .title{
+  /* height: 80px; */
+  font-size: 22px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+.note .content{
+  color:white;
+  margin: 10px 0px 10px 0px;
+  text-transform: capitalize;
+}
+.note .date-pin-div{
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+  align-items: center;
+  color: salmon;
+  /* border-bottom: 1px solid white; */
+  margin-bottom: 4px;
+}
+.note .tags-edit-del-div{
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  margin-top: 10px;
+}
+.note .tags-edit-del-div .tag{
+  margin-right: 7px;
+  color:black;
+}
+.note .tags-edit-del-div .edit-btn{
+  font-size:23px;
+  color: white;
+  margin-right: 10px;
+}
+.note .tags-edit-del-div .del-btn{
+  font-size: 23px;
+  color: white;
+}
+.note .tags-edit-del-div .del-btn:hover{
+  color:black;
+  /* background-color: white; */
+}
+.note .tags-edit-del-div .edit-btn:hover{
+  color: black;
+}
+
+
+/* ****************************** Addnewmodal.js ************************ */
+.modal-wrapper{
+  position: absolute;
+  top:0px;
+  background-color: rgba(255, 255, 235,1);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.modal-div{
+  border: 1px solid blue;
+  padding: 1rem 2rem;
+}
+.error{
+  width: 100%;
+  background-color:aqua;
+  color: black;
+  /* color: #ffffff; */
+  height: 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-div input,textarea{
+  width: 100%;
+  background-color: aqua;
+  border: none;
+  outline: none;
+  height: 35px;
+  font-size: 17px;
+  padding:0.5rem 1rem;
+}
+.modal-div textarea{
+  height:100px;
+}
+.modal-div .tag-div{
+  display:flex;
+  margin-bottom: 1rem;
+
+}
+.modal-div .tag-btn{
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-add-btn{
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.modal-div .tag-list{
+  background-color:rgba(87, 87, 124,0.4);
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.added-tags{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.added-tags .remove-tag-btn{
+  background-color: white;
+  color: black;
+  height: 100%;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid blue;
+}
+.addBtn{
+  position:absolute;
+  right: 0px;
+  bottom: 0px;
+  /* width: 100px; */
+  background-color:blue;
+  color: white;
+  /* height: 30px; */
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 21px;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+}
+
+
+
+/* search-input,search-btn */
+.search-input{
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left:1rem;
+  font-size: 16px;
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.search-btn{
+  /* width: 30px; */
+  background-color: white;
+  height:30px;
+  color: #4e2237;
+  font-size: 26px;
+  padding-right: 10px;
+  cursor: pointer;
+  border-top-right-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
